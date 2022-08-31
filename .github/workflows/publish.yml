@@ -18,8 +18,9 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - uses: actions/setup-java@v3
+      - uses: actions/setup-java@v2
         with:
+          distribution: 'adopt'
           java-version: ${{ matrix.java-version }}
       - run: mvn -B install --no-transfer-progress --file pom.xml
 
@@ -30,8 +31,9 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: Set up settings.xml for GitHub Packages
-        uses: actions/setup-java@v3
+        uses: actions/setup-java@v2
         with:
+          distribution: 'adopt'
           java-version: 11
 
       - name: Publish the new version to GitHub Packages (skipping tests since we only deploy if the build workflow succeeded)
