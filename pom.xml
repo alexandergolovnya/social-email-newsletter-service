@@ -89,13 +89,13 @@
                             <name>ghcr.io/${github.username}/social-newsletter-service/${project.artifactId}:${project.version}</name>
                             <publish>true</publish>
                         </image>
-                        <docker>
-                            <publishRegistry>
-                                <token>${GITHUB_TOKEN}</token>
-                                <username>${github.username}</username>
-                                <url>https://ghcr.io</url>
-                            </publishRegistry>
-                        </docker>
+<!--                        <docker>-->
+<!--                            <publishRegistry>-->
+<!--                                <token>${GITHUB_TOKEN}</token>-->
+<!--                                <username>${github.username}</username>-->
+<!--                                <url>https://ghcr.io</url>-->
+<!--                            </publishRegistry>-->
+<!--                        </docker>-->
                     </configuration>
 
                     <executions>
