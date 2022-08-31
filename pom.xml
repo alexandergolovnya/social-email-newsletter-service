@@ -82,10 +82,11 @@
                     <groupId>org.springframework.boot</groupId>
                     <artifactId>spring-boot-maven-plugin</artifactId>
                     <version>${spring-boot.version}</version>
+
                     <configuration>
                         <image>
                             <name>ghcr.io/${github.username}/${project.artifactId}:${project.version}</name>
-                            <publish>true</publish>
+                            <publish>false</publish>
                         </image>
                         <docker>
                             <publishRegistry>
@@ -94,6 +95,14 @@
                             </publishRegistry>
                         </docker>
                     </configuration>
+
+                    <executions>
+                        <execution>
+                            <goals>
+                                <goal>build-image</goal>
+                            </goals>
+                        </execution>
+                    </executions>
                 </plugin>
             </plugins>
         </pluginManagement>

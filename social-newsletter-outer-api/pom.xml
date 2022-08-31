@@ -49,6 +49,27 @@
                 <configuration>
                     <mainClass>com.golovnya.social.newsletter.OuterApiApplication</mainClass>
                 </configuration>
+<!--                <configuration>-->
+<!--                    <mainClass>com.golovnya.social.newsletter.OuterApiApplication</mainClass>-->
+<!--                    <image>-->
+<!--                        <name>ghcr.io/${github.username}/${project.artifactId}:${project.version}</name>-->
+<!--                        <publish>true</publish>-->
+<!--                    </image>-->
+<!--                    <docker>-->
+<!--                        <publishRegistry>-->
+<!--                            <token>${GITHUB_TOKEN}</token>-->
+<!--                            <url>https://ghcr.io</url>-->
+<!--                        </publishRegistry>-->
+<!--                    </docker>-->
+<!--                </configuration>-->
+
+<!--                <executions>-->
+<!--                    <execution>-->
+<!--                        <goals>-->
+<!--                            <goal>build-image</goal>-->
+<!--                        </goals>-->
+<!--                    </execution>-->
+<!--                </executions>-->
             </plugin>
         </plugins>
     </build>
