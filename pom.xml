@@ -89,12 +89,11 @@
                     <configuration>
                         <image>
                             <name>ghcr.io/alexandergolovnya/social-newsletter-service/${project.artifactId}:${project.version}</name>
-                            <publish>true</publish>
                         </image>
                         <docker>
                             <publishRegistry>
-                                <email>mail@golovnya.ru</email>
-                                <token>${GITHUB_TOKEN}</token>
+                                <username>alexandergolovnya</username>
+                                <password>${GITHUB_TOKEN}</password>
                                 <url>https://ghcr.io</url>
                             </publishRegistry>
                         </docker>
