@@ -25,6 +25,6 @@ jobs:
       - name: Publish package
         run: |
             echo Deploying project
-            mvn --batch-mode clean install spring-boot:build-image
+            mvn --batch-mode deploy
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
