@@ -20,7 +20,7 @@
         <jupiter.version>5.9.0</jupiter.version>
         <maven-jar-plugin.version>3.2.0</maven-jar-plugin.version>
         <github.username>alexandergolovnya</github.username>
-        <GITHUB_TOKEN>test</GITHUB_TOKEN>
+        <GITHUB_TOKEN>tokenToReplace</GITHUB_TOKEN>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
     </properties>
@@ -85,12 +85,11 @@
                     <configuration>
                         <image>
                             <name>ghcr.io/${github.username}/${project.artifactId}:${project.version}</name>
-                            <publish>false</publish>
+                            <publish>true</publish>
                         </image>
                         <docker>
                             <publishRegistry>
-                                <username>${github.username}</username>
-                                <password>${GITHUB_TOKEN}</password>
+                                <token>${GITHUB_TOKEN}</token>
                                 <url>https://ghcr.io</url>
                             </publishRegistry>
                         </docker>
