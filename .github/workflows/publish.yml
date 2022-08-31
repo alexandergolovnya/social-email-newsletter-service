@@ -22,6 +22,7 @@ jobs:
         with:
           distribution: 'adopt'
           java-version: ${{ matrix.java-version }}
+          cache: maven
       - run: mvn -B install --no-transfer-progress --file pom.xml
 
   publish:
@@ -35,8 +36,9 @@ jobs:
         with:
           distribution: 'adopt'
           java-version: 11
+          cache: maven
 
       - name: Publish the new version to GitHub Packages (skipping tests since we only deploy if the build workflow succeeded)
-        run: mvn -B --no-transfer-progress deploy -DskipTests
+        run: mvn -B --no-transfer-progress deploy -DskipTests -Dspring-boot.build-image.publish=true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
