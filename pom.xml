@@ -71,7 +71,7 @@
         <repository>
             <id>github</id>
             <name>GitHub Packages</name>
-            <url>https://maven.pkg.github.com/${github.username}/${project.artifactId}</url>
+            <url>https://maven.pkg.github.com/${github.username}/social-newsletter-service</url>
         </repository>
     </distributionManagement>
 
@@ -85,7 +85,7 @@
 
                     <configuration>
                         <image>
-<!--                            <name>ghcr.io/${github.username}/${project.artifactId}:${project.version}</name>-->
+                            <name>ghcr.io/${github.username}/${project.artifactId}:${project.version}</name>
                             <publish>true</publish>
                         </image>
                         <docker>
