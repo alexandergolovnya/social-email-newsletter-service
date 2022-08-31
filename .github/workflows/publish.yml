@@ -25,6 +25,6 @@ jobs:
       - name: Publish package
         run: |
             echo Deploying project
-            mvn --batch-mode deploy
+            mvn --batch-mode package deploy
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
