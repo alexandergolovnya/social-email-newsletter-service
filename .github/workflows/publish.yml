@@ -2,7 +2,7 @@ name: Publish package to GitHub Packages
 
 on:
   push:
-    branches: [ "master" ]
+    branches: [ "master", "test-init" ]
   pull_request:
     branches: [ "master" ]
 
