@@ -85,7 +85,7 @@
 
                     <configuration>
                         <image>
-                            <name>ghcr.io/${github.username}/${project.artifactId}:${project.version}</name>
+<!--                            <name>ghcr.io/${github.username}/${project.artifactId}:${project.version}</name>-->
                             <publish>true</publish>
                         </image>
                         <docker>
