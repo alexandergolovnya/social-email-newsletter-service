@@ -23,7 +23,7 @@ jobs:
           distribution: 'adopt'
           java-version: ${{ matrix.java-version }}
           cache: maven
-      - run: mvn -B install --no-transfer-progress --file pom.xml
+      - run: mvn -B package -Dspring-boot.build-image.publish=true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
