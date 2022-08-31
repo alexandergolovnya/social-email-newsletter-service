@@ -41,6 +41,6 @@ jobs:
           cache: maven
 
       - name: Publish the new version to GitHub Packages (skipping tests since we only deploy if the build workflow succeeded)
-        run: mvn -B --no-transfer-progress deploy -DskipTests -Dspring-boot.build-image.publish=true
+        run: mvn -B --no-transfer-progress package deploy -DskipTests -Dspring-boot.build-image.publish=true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
