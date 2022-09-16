@@ -1,0 +1,10 @@
+---
+version: '2'
+services:
+  social-newsletter-outer-api:
+    image: ghcr.io/alexandergolovnya/social-newsletter-service/social-newsletter-outer-api:0.0.1-SNAPSHOT
+    hostname: social-newsletter-outer-api
+    environment:
+      SPRING_PROFILES_ACTIVE: "local"
+    ports:
+      - "8080:8080"
